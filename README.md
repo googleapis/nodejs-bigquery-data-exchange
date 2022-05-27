@@ -31,8 +31,8 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 * [Quickstart](#quickstart)
   * [Before you begin](#before-you-begin)
   * [Installing the client library](#installing-the-client-library)
-
-
+  * [Using the client library](#using-the-client-library)
+* [Samples](#samples)
 * [Versioning](#versioning)
 * [Contributing](#contributing)
 * [License](#license)
@@ -54,6 +54,61 @@ npm install @google-cloud/bigquery-data-exchange
 ```
 
 
+### Using the client library
+
+```javascript
+/**
+ * TODO(developer): Uncomment these variables before running the sample.
+ */
+/**
+ *  Required. The parent resource path of the DataExchanges.
+ *  e.g. `projects/myproject/locations/US`.
+ */
+// const parent = 'abc123'
+/**
+ *  The maximum number of results to return in a single response page. Leverage
+ *  the page tokens to iterate through the entire collection.
+ */
+// const pageSize = 1234
+/**
+ *  Page token, returned by a previous call, to request the next page of
+ *  results.
+ */
+// const pageToken = 'abc123'
+
+// Imports the Dataexchange library
+const {AnalyticsHubServiceClient} =
+  require('@google-cloud/bigquery-data-exchange').v1beta1;
+
+// Instantiates a client
+const dataexchangeClient = new AnalyticsHubServiceClient();
+
+async function callListDataExchanges() {
+  // Construct request
+  const request = {
+    parent,
+  };
+
+  // Run request
+  const iterable = await dataexchangeClient.listDataExchangesAsync(request);
+  for await (const response of iterable) {
+    console.log(response);
+  }
+}
+
+callListDataExchanges();
+
+```
+
+
+
+## Samples
+
+Samples are in the [`samples/`](https://github.com/googleapis/nodejs-bigquery-data-exchange/tree/master/samples) directory. Each sample's `README.md` has instructions for running its sample.
+
+| Sample                      | Source Code                       | Try it |
+| --------------------------- | --------------------------------- | ------ |
+| Quickstart | [source code](https://github.com/googleapis/nodejs-bigquery-data-exchange/blob/master/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-bigquery-data-exchange&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
 
@@ -117,7 +172,7 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-bigquery-data-exchange/blob/master/LICENSE)
 
-[client-docs]: https://cloud.google.com/nodejs/docs/reference/dataexchange/latest
+[client-docs]: https://cloud.google.com/nodejs/docs/reference/analyticshub/latest
 
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
