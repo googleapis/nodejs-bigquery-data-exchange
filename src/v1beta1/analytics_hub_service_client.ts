@@ -464,7 +464,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.getDataExchange(request, options, callback);
@@ -570,7 +570,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.createDataExchange(request, options, callback);
@@ -671,7 +671,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        'data_exchange.name': request.dataExchange!.name || '',
+        'data_exchange.name': request.dataExchange!.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.updateDataExchange(request, options, callback);
@@ -769,7 +769,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.deleteDataExchange(request, options, callback);
@@ -867,7 +867,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.getListing(request, options, callback);
@@ -973,7 +973,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.createListing(request, options, callback);
@@ -1074,7 +1074,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        'listing.name': request.listing!.name || '',
+        'listing.name': request.listing!.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.updateListing(request, options, callback);
@@ -1172,7 +1172,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.deleteListing(request, options, callback);
@@ -1277,7 +1277,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        name: request.name || '',
+        name: request.name ?? '',
       });
     this.initialize();
     return this.innerApiCalls.subscribeListing(request, options, callback);
@@ -1364,7 +1364,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        resource: request.resource || '',
+        resource: request.resource ?? '',
       });
     this.initialize();
     return this.innerApiCalls.getIamPolicy(request, options, callback);
@@ -1459,7 +1459,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        resource: request.resource || '',
+        resource: request.resource ?? '',
       });
     this.initialize();
     return this.innerApiCalls.setIamPolicy(request, options, callback);
@@ -1548,7 +1548,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        resource: request.resource || '',
+        resource: request.resource ?? '',
       });
     this.initialize();
     return this.innerApiCalls.testIamPermissions(request, options, callback);
@@ -1650,7 +1650,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.listDataExchanges(request, options, callback);
@@ -1691,7 +1691,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listDataExchanges'];
     const callSettings = defaultCallSettings.merge(options);
@@ -1741,7 +1741,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listDataExchanges'];
     const callSettings = defaultCallSettings.merge(options);
@@ -1849,7 +1849,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        organization: request.organization || '',
+        organization: request.organization ?? '',
       });
     this.initialize();
     return this.innerApiCalls.listOrgDataExchanges(request, options, callback);
@@ -1890,7 +1890,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        organization: request.organization || '',
+        organization: request.organization ?? '',
       });
     const defaultCallSettings = this._defaults['listOrgDataExchanges'];
     const callSettings = defaultCallSettings.merge(options);
@@ -1940,7 +1940,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        organization: request.organization || '',
+        organization: request.organization ?? '',
       });
     const defaultCallSettings = this._defaults['listOrgDataExchanges'];
     const callSettings = defaultCallSettings.merge(options);
@@ -2047,7 +2047,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     this.initialize();
     return this.innerApiCalls.listListings(request, options, callback);
@@ -2088,7 +2088,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listListings'];
     const callSettings = defaultCallSettings.merge(options);
@@ -2138,7 +2138,7 @@ export class AnalyticsHubServiceClient {
     options.otherArgs.headers = options.otherArgs.headers || {};
     options.otherArgs.headers['x-goog-request-params'] =
       this._gaxModule.routingHeader.fromParams({
-        parent: request.parent || '',
+        parent: request.parent ?? '',
       });
     const defaultCallSettings = this._defaults['listListings'];
     const callSettings = defaultCallSettings.merge(options);
